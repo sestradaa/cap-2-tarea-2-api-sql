@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %} Edit Post post['id'] {% endblock %}
+{% block title %} Edit Alumno post['id'] {% endblock %}
 
 {% block content %}
 
 {% if mensaje %}
-<h1>Editar el Post {{ post_error }}</h1>
+<h1>Editar el Alumno {{ post_error }}</h1>
 {% else %}
-<h1>Editar el Post {{ post['id'] }}</h1>
+<h1>Editar el Alumno {{ post['id'] }}</h1>
 {% endif %}
 
 <form method="post">
@@ -15,7 +15,7 @@
         <div class="alert alert-primary" role="alert">{{ mensaje }}</div>
     {% endif %}
     <div class="form-group">
-        <label for="title">Titulo</label>
+        <label for="title">Nombre</label>
         {% if mensaje %}
         <input type="text" id="title" name="title"
         placeholder="Post title" class="form-control"
@@ -23,18 +23,33 @@
         {% else %}
         <input type="text" id="title" name="title"
         placeholder="Post title" class="form-control"
-        value="{{ post['title'] }}">
+        value="{{ post['nombre'] }}">
         {% endif %}
     </div>
     <div class="form-group">
-        <label for="content">Contenido</label>
+        <label for="content">Apellido</label>
         {% if mensaje %}
         <textarea id="content" name="content"
                   placeholder="Post content" class="form-control">{{ newContent }}</textarea>
         {% else %}
         <textarea id="content" name="content"
-                  placeholder="Post content" class="form-control">{{ post['content'] }}</textarea>
+                  placeholder="Post content" class="form-control">{{ post['apellido'] }}</textarea>
         {% endif %}          
+    </div>
+    <div class="form-group">
+        <label for="content">Aprobado</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ post['aprobado'] }}</textarea>        
+    </div>
+    <div class="form-group">
+        <label for="content">nota</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ post['nota'] }}</textarea>        
+    </div>
+    <div class="form-group">
+        <label for="content">Fecha</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ post['fecha'] }}</textarea>        
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Actualizar</button>

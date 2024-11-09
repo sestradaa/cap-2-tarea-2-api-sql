@@ -3,7 +3,7 @@
 {% block title %}Create{% endblock %}
 
 {% block content %}
-<h1>Crear un nuevo Post</h1>
+<h1>Crear un nuevo Alumno</h1>
 <form method="post">
     
         {% if mensaje %}
@@ -12,15 +12,30 @@
     
     
     <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Nombre</label>
         <input type="text" id="title" name="title"
                placeholder="Post title" class="form-control"
-               value="{{ request.form.get('title', '') }}">
+               value="{{ request.form.get('nombre', '') }}">
     </div>
     <div class="form-group">
-        <label for="content">Content</label>
+        <label for="content">Apellido</label>
         <textarea id="content" name="content"
-                  placeholder="Post content" class="form-control">{{ request.form.get('content', '') }}</textarea>
+                  placeholder="Post content" class="form-control">{{ request.form.get('apellido', '') }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="content">aprobado</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ request.form.get('aprobado', '') }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="content">nota</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ request.form.get('nota', '') }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="content">Fecha</label>
+        <textarea id="content" name="content"
+                  placeholder="Post content" class="form-control">{{ request.form.get('fecha', '') }}</textarea>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
