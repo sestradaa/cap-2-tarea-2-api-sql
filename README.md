@@ -25,7 +25,6 @@ python app.py
 
 ### *Para desactivar el entorno virtual* `deactivate`
 
-## (SENIOR DEVELOPER) POR FAVOR CORREGIR LOS SIGUIENTES ERRORES: 
 ## Examen final Python API Developer
 ## pregunta 1
 ## Para qué se puede usar Python en lo que respecta a datos. Dar 5 casos y explicar brevemente.
